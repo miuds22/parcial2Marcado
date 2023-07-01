@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function(){
 function cargarDia(usuario){
     var turnosUsuario = turnos.filter(turno => turno.medico === usuario) 
     const fechas = turnosUsuario.map(a => a.fecha);
+    console.log(fechas)
     var listadoTurnoshtml = fechas.filter(onlyUnique);
     console.log(listadoTurnoshtml);
     var ret = ''
