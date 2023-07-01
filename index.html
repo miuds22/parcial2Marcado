@@ -1,0 +1,89 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="estilos.css">
+  </head>
+  <!-- pagina -->
+  <header>
+    <nav class="navbar bg-body-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="sources/logoPamiHospital.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Hospital Pami Hurlingham
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- header-->
+  <body>
+    <div class="container-fluid fs-main">
+      <div class="container bdlogin">
+        <div class="form">
+          <!-- formulario -->
+          <form id="loginForm">
+            <div class="row">
+              <div class="float-left">
+                <img src="./sources/DC_ICON_usuario.png" class="icono-login">
+              </div>
+              <div class="m-icono">
+                <input  type="text" id="txtUsuario" placeholder="Usuario" class="form-control form-control-sm">
+              </div>
+            </div>
+            <div class="row">
+              <div class="float-left">
+                <img src="./sources/DC_ICON_pass.png" class="icono-login">
+              </div>
+              <div class="m-icono">
+                <input  type="password" id="txtPassword" placeholder="Contraseña" class="form-control form-control-sm">
+              </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Ingresar"></input>
+            <div id="mensajeError">
+                  La contraseña que ingresaste es incorrecta.
+                  <button class="btn btn-danger" onclick="alert('contactate con el administrador')"><b>¿Olvidaste tu contraseña?</b></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="landing" class="container bk-propaganda">
+      <!-- primer fila-->
+      <div class="row">
+        <div class="col-xl-6 col-sm-12" >
+          <div class="tarjeta"> 
+            El Nuevo Hospital PAMI de Hurlingham, ubicado en el cruce de las calle General O’Brien y Guardia Vieja, barrio Jorge Newbery, tendrá tomógrafo, resonador, mamógrafo, torre de endoscopía, 2 quirófanos y 24 camas de internación, entre otras incorporaciones. El edificio, cercano a la estación Rubén Darío del Ferrocarril Urquiza, ocupará más de dos mil metros cuadrados y será de vital importancia para las personas mayores de la zona oeste de la provincia de Buenos Aires.
+          </div>
+        </div>
+        <div class="col-xl-6 col-sm-12 pd-8" >
+          <iframe  id="video" src="https://www.youtube.com/embed/lUyGuAPDFPI" title="Nuevo Hospital PAMI de Hurlingham 🏥 ❤️" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      
+        </div>  
+      </div>
+      <div class="row">
+        <!-- segunda fila-->
+        <div class="col-xl-6 col-sm-12" >
+          <img src="sources/hospital.jpg" alt="nuevo hospitalote">
+        </div>
+        <div class="col-xl-6 col-sm-12" >
+          <div class="tarjeta"> 
+            hospital de alta complejidad  <strong> para nuestros abuelos y para todos</strong>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+  <footer class="footer">
+    <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+      <img src="sources/pami.png" alt="pami" style="height: 100%; width: auto;">
+    </div>
+  </footer>
+  
+  
+  </html>

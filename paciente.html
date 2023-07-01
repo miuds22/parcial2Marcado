@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<!-- header-->
+<header>
+  <nav class="navbar bg-body-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="sources/logoPamiHospital.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Hospital Pami Hurlingham
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- pagina -->
+<body>
+  <div id="titulo">
+    <h1>Turnos pendientes</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="container menu" >
+      <h2>Agregar turno</h2>
+      <!--pedir turnos-->
+      <form  id="AgregarTurno">
+        <div class="form-group">
+          <label for="cbEspecialidad">especialidad:</label>
+          <select name="Especialidad" id="cbEspecialidad" class="form-select"  placeholder="elija la especialidad">
+            <option value="" disabled selected hidden>elija Especialidad</option>
+            <option value="pediatria">pediatria</option>
+            <option value="Urgencias">Urgencias</option>
+            <option value="colonoscopia">colonoscopia</option>
+            <option value="urgencias">urgencias</option>
+            <option value="Otros">Otros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cbDoctor">Elija profesional:</label>
+          <select name="Doctor" id="cbDoctor" class="form-select"  placeholder="elija la Doctor">
+            <option value="" disabled selected hidden>elija doctor</option>
+            <option value="House">House</option>
+            <option value="Favaloro">Favaloro</option>
+            <option value="el Carnicero">el Carnicero</option>
+          </select>
+        </div>
+        <div class="row" style="padding-top: 2rem;">
+          <div class="col-xl-6 col-sm-12">
+            <label for="txtFecha">fecha:</label>
+          <input type="date" class="form-date" id="txtFecha" name="txtFecha"  min="2023-06-01" max="2024-01-01" placeholder="--/--/--">
+          </div>
+          <div class="col-xl-6 col-sm-12">
+            <label for="txthora">hora</label>
+            <select name="txthora" id="txthora">
+            <option value="" disabled selected hidden>--</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+            </select>  
+            <label for="txtminutos">:</label>
+            <select name="txtminutos" id="txtminutos">
+            <option value="" disabled selected hidden>--</option>              
+              <option value="00">00</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="txtEmail" class="form-label">email:</label>
+          <input type="email" class="form-control" id="txtEmail">
+        </div>
+        <div class="mb-3">
+          <label for="txtObservaciones">Observaciones:</label>
+          <textarea class="form-control" id="txtObservaciones" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <h2 id="mensaje"></h2>
+      </form>
+    </div>
+  </div>
+  <div style="width: 50%; height: 2px; background-color: black; margin-left: 25%;margin-right: 25%; margin-bottom: 2rem; margin-top: 2rem;" > </div>
+  <!-- Lista de turnos-->
+  <div  id="containerTabla" class="container bk-propaganda">
+    <h1>Turnos pendientes</h1>
+    <table id="tabla" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">fecha</th>
+          <th scope="col">hora</th>
+          <th scope="col">especialidad</th>
+          <th scope="col">medico</th>
+          <th scope="col">Observaciones</th>
+          <th scope="col">acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+    </table>
+  </div>
+  <script src="paciente.js"></script>
+</body>
+<footer class="footer">
+  <div style="position: absolute; left: 0; right: 0; top: 0; bottom: 0;">
+    <img src="sources/pami.png" alt="pami" style="height: 100%; width: auto;">
+  </div>
+</footer>
+</html>
